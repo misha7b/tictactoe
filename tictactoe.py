@@ -31,8 +31,8 @@ def checkWin(x,y,playerNo):
             return True
 
 
-
 print(board)
+
 
 while (True):
 
@@ -60,8 +60,6 @@ while (True):
 
     if (checkWin(x,y,playerNo)):
         break
-
-    
     
     turnNo += 1
 
