@@ -1,15 +1,22 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.leftChild = None
-        self.rightChild = None
+        self.children = []
+        
+    def addChild(self, data):
+        self.children.append(data)
     
-    def insertLeft(self, data):
-        if (data < self.data):
-            self.leftChild
+    def traverse(self):
+        nodesToVisit = self
+        while len(nodesToVisit) > 0:
+            currentNode = nodesToVisit.pop()
+            print(currentNode.data)
+            nodesToVisit += currentNode.children
 
-    def printNode(self):
-        print(self.data)
 
-root = Node(30)
-root.printNode()
+
+
+
+
+
+ 
