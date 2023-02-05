@@ -6,6 +6,8 @@ board = np.array([['-','-','-'],['-','-','-'],['-','-','-']])
 turnNo = 0
 winner = ''
 
+
+
 def getScore(rowScore):
     
     tempScore = 0
@@ -27,9 +29,7 @@ def getScore(rowScore):
     
     return tempScore
 
-
-
-def evalPos(playerNo):
+def evalPos():
      
     posScore = 0
      
@@ -104,11 +104,6 @@ def evalPos(playerNo):
         
     return posScore
 
- 
-    
-    
-    
-    
 
 def placeX(x,y):
     board[x,y] = 'X'
@@ -166,7 +161,7 @@ while (True):
 
     print(board)
 
-    print(evalPos(playerNo))
+    print(evalPos())
 
     if (checkWin(x,y,playerNo)):
         break
